@@ -32,7 +32,7 @@
     NSString *copiedString = pasteBoard.string;
     
     //文字数表示
-    NSString *countStr = [NSString stringWithFormat:@"%d文字", [copiedString length]];
+    NSString *countStr = [NSString stringWithFormat:@"%d %@", [copiedString length], NSLocalizedString(@"characters", @"")];
     _countLabel.text = countStr;
     
     //コピー文字列を表示
