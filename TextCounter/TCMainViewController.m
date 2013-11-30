@@ -27,6 +27,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+    NSString *copiedString = pasteBoard.string;
+    
+    //文字数表示
+    NSString *countStr = [NSString stringWithFormat:@"%d文字", [copiedString length]];
+    _countLabel.text = countStr;
+    
+    //コピー文字列を表示
+    _wordLabel.text = copiedString;
 }
 
 - (void)didReceiveMemoryWarning
