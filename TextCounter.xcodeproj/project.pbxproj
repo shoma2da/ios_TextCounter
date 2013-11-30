@@ -22,6 +22,7 @@
 		341A9CEA184A1202000A79EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 341A9CE8184A1202000A79EE /* InfoPlist.strings */; };
 		341A9CEC184A1202000A79EE /* TextCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 341A9CEB184A1202000A79EE /* TextCounterTests.m */; };
 		345249B3184A186900B86B51 /* TCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345249B2184A186900B86B51 /* TCMainViewController.m */; };
+		345249C0184A1EB400B86B51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345249BE184A1EB400B86B51 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		341A9CEB184A1202000A79EE /* TextCounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCounterTests.m; sourceTree = "<group>"; };
 		345249B1184A186900B86B51 /* TCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMainViewController.h; sourceTree = "<group>"; };
 		345249B2184A186900B86B51 /* TCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMainViewController.m; sourceTree = "<group>"; };
+		345249BF184A1EB400B86B51 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		341A9CB4184A1202000A79EE = {
 			isa = PBXGroup;
 			children = (
+				345249B4184A1C6600B86B51 /* Resources */,
 				341A9CC6184A1202000A79EE /* TextCounter */,
 				341A9CE5184A1202000A79EE /* TextCounterTests */,
 				341A9CBF184A1202000A79EE /* Frameworks */,
@@ -157,6 +160,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		345249B4184A1C6600B86B51 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				345249B7184A1D8D00B86B51 /* English.lproj */,
+			);
+			name = Resources;
+			path = TextCounter/Resources;
+			sourceTree = "<group>";
+		};
+		345249B7184A1D8D00B86B51 /* English.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				345249BE184A1EB400B86B51 /* Localizable.strings */,
+			);
+			path = English.lproj;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,6 +237,7 @@
 			knownRegions = (
 				en,
 				Base,
+				English,
 			);
 			mainGroup = 341A9CB4184A1202000A79EE;
 			productRefGroup = 341A9CBE184A1202000A79EE /* Products */;
@@ -235,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				341A9CD9184A1202000A79EE /* Images.xcassets in Resources */,
+				345249C0184A1EB400B86B51 /* Localizable.strings in Resources */,
 				341A9CCB184A1202000A79EE /* InfoPlist.strings in Resources */,
 				341A9CD4184A1202000A79EE /* Main.storyboard in Resources */,
 			);
@@ -303,6 +325,14 @@
 				341A9CE9184A1202000A79EE /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		345249BE184A1EB400B86B51 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				345249BF184A1EB400B86B51 /* English */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
