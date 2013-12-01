@@ -28,6 +28,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [self viewWordAndCount];
+    
+    //アプリ再表示時のイベントを補足
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewWordAndCount) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void) viewWordAndCount {
+    //コピーされた文字列を取得
     UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
     NSString *copiedString = pasteBoard.string;
     
@@ -41,12 +55,6 @@
     } else {
         _wordLabel.text = copiedString;
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
