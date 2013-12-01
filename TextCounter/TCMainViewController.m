@@ -43,11 +43,11 @@
         [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
         NSLog(@"finish");
     }];
-    [self performSelectorInBackground:@selector(count) withObject:nil];
+    [self performSelectorInBackground:@selector(checkPasteBoardChange) withObject:nil];
 }
 
-- (void) count {
-    for (int i = 0; i < 100; i++) {
+- (void) checkPasteBoardChange {
+    for (int i = 0; i < 15 * 60; i++) { //15分はチェックを続ける
         [NSThread sleepForTimeInterval:1];
         NSLog(@"count is %d", (i + 1));
     }
