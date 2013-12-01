@@ -8,7 +8,9 @@
 
 #import "TCMainViewController.h"
 
-@interface TCMainViewController ()
+@interface TCMainViewController () {
+    UIBackgroundTaskIdentifier _backgroundTask;
+}
 
 @end
 
@@ -35,6 +37,20 @@
     
     //表示文言の設定
     _notificationDescLabel.text = NSLocalizedString(@"notificationDesc", nil);
+    
+    //バックグラウンド処理
+    _backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
+        NSLog(@"finish");
+    }];
+    [self performSelectorInBackground:@selector(count) withObject:nil];
+}
+
+- (void) count {
+    for (int i = 0; i < 100; i++) {
+        [NSThread sleepForTimeInterval:1];
+        NSLog(@"count is %d", (i + 1));
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +74,7 @@
     } else {
         _wordLabel.text = copiedString;
     }
+    
 }
 
 @end
