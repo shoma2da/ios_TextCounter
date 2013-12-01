@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  TextCounter
+
+  Created by Shoichi Matsuda on 2013/11/30.
+  Copyright (c) 2013年 Shoichi Matsuda. All rights reserved.
+*/
+"characters" = "characters";
+
+"hint" = "Before you open this application, please copy any characters.";
