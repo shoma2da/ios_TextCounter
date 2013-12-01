@@ -29,6 +29,9 @@
 	// Do any additional setup after loading the view.
     
     [self viewWordAndCount];
+    
+    //アプリ再表示時のイベントを補足
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewWordAndCount) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
