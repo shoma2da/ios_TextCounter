@@ -50,7 +50,14 @@
 - (void) checkPasteBoardChange {
     for (int i = 0; i < 15 * 60; i++) { //15分はチェックを続ける
         [NSThread sleepForTimeInterval:1];
-        NSLog(@"count is %d", (i + 1));
+        
+        NSString *newString = [self getCopiedString];
+        
+        if ([_currentCopiedString isEqualToString:newString]) {
+        } else {
+            _currentCopiedString = newString;
+            NSLog(@"detect!!!");
+        }
     }
 }
 
