@@ -35,8 +35,8 @@
                                 <rect key="frame" x="239" y="527" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="通知表示する" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8I-Ph-iUY">
-                                <rect key="frame" x="32" y="527" width="153" height="31"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4L1-Pu-YqV">
+                                <rect key="frame" x="37" y="527" width="133" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
@@ -46,6 +46,7 @@
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="d2r-FK-gnE" id="XEj-df-k9K"/>
+                        <outlet property="notificationDescLabel" destination="4L1-Pu-YqV" id="J5m-3T-IQx"/>
                         <outlet property="wordLabel" destination="Nkj-Rs-eQs" id="3aI-zc-tDl"/>
                     </connections>
                 </viewController>
