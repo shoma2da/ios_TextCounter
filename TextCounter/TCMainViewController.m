@@ -10,6 +10,7 @@
 
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
+    NSString *_currentCopiedString;
 }
 
 @end
@@ -38,7 +39,7 @@
     //表示文言の設定
     _notificationDescLabel.text = NSLocalizedString(@"notificationDesc", nil);
     
-    //バックグラウンド処理
+    //バックグラウンドでPasteBoardを監視
     _backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
         [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
         NSLog(@"finish");
@@ -60,21 +61,24 @@
 }
 
 - (void) viewWordAndCount {
-    //コピーされた文字列を取得
-    UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
-    NSString *copiedString = pasteBoard.string;
+    _currentCopiedString = [self getCopiedString];
     
     //文字数表示
-    NSString *countStr = [NSString stringWithFormat:@"%d %@", [copiedString length], NSLocalizedString(@"characters", @"")];
+    NSString *countStr = [NSString stringWithFormat:@"%d %@", [_currentCopiedString length], NSLocalizedString(@"characters", @"")];
     _countLabel.text = countStr;
     
     //コピー文字列を表示
-    if ([copiedString length] == 0) {
+    if ([_currentCopiedString length] == 0) {
         _wordLabel.text = NSLocalizedString(@"hint", @"");
     } else {
-        _wordLabel.text = copiedString;
+        _wordLabel.text = _currentCopiedString;
     }
     
+}
+
+- (NSString*) getCopiedString {
+    UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+    return pasteBoard.string;
 }
 
 @end
