@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UITextView *wordLabel;
+@property (weak, nonatomic) IBOutlet UILabel *notificationDescLabel;
 
 @end

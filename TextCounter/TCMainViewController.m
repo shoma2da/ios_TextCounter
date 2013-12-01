@@ -32,6 +32,9 @@
     
     //アプリ再表示時のイベントを補足
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewWordAndCount) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    //表示文言の設定
+    _notificationDescLabel.text = NSLocalizedString(@"notificationDesc", nil);
 }
 
 - (void)didReceiveMemoryWarning
