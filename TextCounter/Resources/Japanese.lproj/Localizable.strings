@@ -6,3 +6,4 @@
   Copyright (c) 2013年 Shoichi Matsuda. All rights reserved.
 */
 "characters" = "文字";
+"hint" = "文字列をコピーしてからアプリを開いてください。コピーされた文字列の文字数を表示します。";

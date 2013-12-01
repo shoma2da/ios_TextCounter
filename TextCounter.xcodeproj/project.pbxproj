@@ -60,6 +60,7 @@
 		345249B2184A186900B86B51 /* TCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMainViewController.m; sourceTree = "<group>"; };
 		345249BF184A1EB400B86B51 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Localizable.strings; sourceTree = "<group>"; };
 		345249C3184A201E00B86B51 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Localizable.strings; sourceTree = "<group>"; };
+		345249C5184AC91500B86B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +345,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				345249BF184A1EB400B86B51 /* English */,
+				345249C5184AC91500B86B51 /* Base */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
