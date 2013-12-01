@@ -28,6 +28,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [self viewWordAndCount];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void) viewWordAndCount {
+    //コピーされた文字列を取得
     UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
     NSString *copiedString = pasteBoard.string;
     
@@ -41,12 +52,6 @@
     } else {
         _wordLabel.text = copiedString;
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
