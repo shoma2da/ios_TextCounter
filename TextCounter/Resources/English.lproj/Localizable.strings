@@ -8,3 +8,4 @@
 "characters" = "characters";
 "hint" = "Before you open this application, please copy any characters.";
 "notificationDesc" = "Notification";
+"finish_message" = "Application has done. Please reopen the application.";

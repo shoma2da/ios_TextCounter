@@ -41,10 +41,19 @@
     _notificationDescLabel.text = NSLocalizedString(@"notificationDesc", nil);
     
     //バックグラウンドでPasteBoardを監視
-    _backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+    void (^finishAction)() = ^{
         [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
-        NSLog(@"finish");
-    }];
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody = NSLocalizedString(@"finish_message", nil);
+        notification.alertAction = @"Open";
+        notification.soundName = UILocalNotificationDefaultSoundName;
+        
+        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+        if (_previousNotification) {
+            [[UIApplication sharedApplication] cancelLocalNotification:_previousNotification];
+        }
+    };
+    _backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:finishAction];
     [self performSelectorInBackground:@selector(checkPasteBoardChange) withObject:nil];
 }
 
