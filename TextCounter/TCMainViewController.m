@@ -56,6 +56,13 @@
         if ([_currentCopiedString isEqualToString:newString]) {
         } else {
             _currentCopiedString = newString;
+            
+            UILocalNotification *notification = [[UILocalNotification alloc] init];
+            notification.alertBody =[NSString stringWithFormat:@"%d %@ : %@", [_currentCopiedString length], NSLocalizedString(@"characters", @""), _currentCopiedString];
+            notification.alertAction = @"Open";
+            notification.soundName = UILocalNotificationDefaultSoundName;
+            [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+            
             NSLog(@"detect!!!");
         }
     }
