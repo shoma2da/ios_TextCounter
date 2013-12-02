@@ -11,6 +11,7 @@
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
     NSString *_currentCopiedString;
+    UILocalNotification *_previousNotification;
 }
 
 @end
@@ -63,7 +64,11 @@
             notification.soundName = UILocalNotificationDefaultSoundName;
             [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
             
-            NSLog(@"detect!!!");
+            if (_previousNotification) {
+                [[UIApplication sharedApplication] cancelLocalNotification:_previousNotification];
+            }
+            
+            _previousNotification = notification;
         }
     }
 }
