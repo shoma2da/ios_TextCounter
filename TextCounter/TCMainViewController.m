@@ -7,10 +7,11 @@
 //
 
 #import "TCMainViewController.h"
+#import "TCWordModel.h"
 
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
-    NSString *_currentCopiedString;
+    TCWordModel *_currentWord;
     UILocalNotification *_previousNotification;
 }
 
@@ -61,14 +62,14 @@
     for (int i = 0; i < 15 * 60; i++) { //15分はチェックを続ける
         [NSThread sleepForTimeInterval:1];
         
-        NSString *newString = [self getCopiedString];
+        TCWordModel *newString = [self getWordModel];
         
-        if ([_currentCopiedString isEqualToString:newString]) {
+        if ([_currentWord isEqual:newString]) {
         } else {
-            _currentCopiedString = newString;
+            _currentWord = newString;
             
             UILocalNotification *notification = [[UILocalNotification alloc] init];
-            notification.alertBody =[NSString stringWithFormat:@"%d %@ : %@", [_currentCopiedString length], NSLocalizedString(@"characters", @""), _currentCopiedString];
+            notification.alertBody =[NSString stringWithFormat:@"%d %@ : %@", _currentWord.wordCount, NSLocalizedString(@"characters", @""), _currentWord.word];
             notification.alertAction = @"Open";
             notification.soundName = UILocalNotificationDefaultSoundName;
             [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
@@ -89,24 +90,24 @@
 }
 
 - (void) viewWordAndCount {
-    _currentCopiedString = [self getCopiedString];
+    _currentWord = [self getWordModel];
     
     //文字数表示
-    NSString *countStr = [NSString stringWithFormat:@"%d %@", [_currentCopiedString length], NSLocalizedString(@"characters", @"")];
+    NSString *countStr = [NSString stringWithFormat:@"%d %@", _currentWord.wordCount, NSLocalizedString(@"characters", @"")];
     _countLabel.text = countStr;
     
     //コピー文字列を表示
-    if ([_currentCopiedString length] == 0) {
+    if (_currentWord.wordCount == 0) {
         _wordLabel.text = NSLocalizedString(@"hint", @"");
     } else {
-        _wordLabel.text = _currentCopiedString;
+        _wordLabel.text = _currentWord.word;
     }
     
 }
 
-- (NSString*) getCopiedString {
+- (TCWordModel*) getWordModel {
     UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
-    return pasteBoard.string;
+    return [[TCWordModel alloc] initWithWord:pasteBoard.string];
 }
 
 @end
