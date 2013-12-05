@@ -10,6 +10,7 @@
 #import "TCWordModel.h"
 #import "TCFinishWordCountNotification.h"
 #import "TCPasteboradChecker.h"
+#import "TCWordCountNotification.h"
 
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
@@ -60,17 +61,14 @@
 - (void) checkPasteBoardChange {
     TCPasteboradChecker *checker = [[TCPasteboradChecker alloc] init];
     [checker startCheck:^(TCWordModel *model) {
-        UILocalNotification *notification = [[UILocalNotification alloc] init];
-        notification.alertBody =[NSString stringWithFormat:@"%d %@ : %@", _currentWord.wordCount, NSLocalizedString(@"characters", @""), _currentWord.word];
-        notification.alertAction = @"Open";
-        notification.soundName = UILocalNotificationDefaultSoundName;
-        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
         
         if (_previousNotification) {
             [[UIApplication sharedApplication] cancelLocalNotification:_previousNotification];
         }
         
-        _previousNotification = notification;
+        [[[TCWordCountNotification alloc] initWithWord:model] show];
+        
+        //_previousNotification = notification;
     }];
 }
 

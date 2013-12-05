@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@class TCWordModel;
 
 @interface TCWordCountNotification : NSObject
 
-- (TCWordCountNotification *) initWithWord:word;
+- (TCWordCountNotification *) initWithWord:(TCWordModel*)word;
 - (void) show;
 
 @end
