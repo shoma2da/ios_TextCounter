@@ -96,4 +96,9 @@
     
 }
 
+- (TCWordModel*) getWordModel {
+    UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+    return [[TCWordModel alloc] initWithWord:pasteBoard.string];
+}
+
 @end
