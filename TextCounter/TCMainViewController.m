@@ -9,6 +9,7 @@
 #import "TCMainViewController.h"
 #import "TCWordModel.h"
 #import "TCFinishWordCountNotification.h"
+#import "TCPasteboradChecker.h"
 
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
@@ -57,28 +58,20 @@
 }
 
 - (void) checkPasteBoardChange {
-    for (int i = 0; i < 15 * 60; i++) { //15分はチェックを続ける
-        [NSThread sleepForTimeInterval:1];
+    TCPasteboradChecker *checker = [[TCPasteboradChecker alloc] init];
+    [checker startCheck:^(TCWordModel *model) {
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody =[NSString stringWithFormat:@"%d %@ : %@", _currentWord.wordCount, NSLocalizedString(@"characters", @""), _currentWord.word];
+        notification.alertAction = @"Open";
+        notification.soundName = UILocalNotificationDefaultSoundName;
+        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
         
-        TCWordModel *newString = [self getWordModel];
-        
-        if ([_currentWord isEqual:newString]) {
-        } else {
-            _currentWord = newString;
-            
-            UILocalNotification *notification = [[UILocalNotification alloc] init];
-            notification.alertBody =[NSString stringWithFormat:@"%d %@ : %@", _currentWord.wordCount, NSLocalizedString(@"characters", @""), _currentWord.word];
-            notification.alertAction = @"Open";
-            notification.soundName = UILocalNotificationDefaultSoundName;
-            [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-            
-            if (_previousNotification) {
-                [[UIApplication sharedApplication] cancelLocalNotification:_previousNotification];
-            }
-            
-            _previousNotification = notification;
+        if (_previousNotification) {
+            [[UIApplication sharedApplication] cancelLocalNotification:_previousNotification];
         }
-    }
+        
+        _previousNotification = notification;
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,11 +94,6 @@
         _wordLabel.text = _currentWord.word;
     }
     
-}
-
-- (TCWordModel*) getWordModel {
-    UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
-    return [[TCWordModel alloc] initWithWord:pasteBoard.string];
 }
 
 @end
