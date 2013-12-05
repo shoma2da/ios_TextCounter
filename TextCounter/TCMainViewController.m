@@ -8,6 +8,7 @@
 
 #import "TCMainViewController.h"
 #import "TCWordModel.h"
+#import "TCFinishWordCountNotification.h"
 
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
@@ -44,12 +45,9 @@
     //バックグラウンドでPasteBoardを監視
     void (^finishAction)() = ^{
         [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
-        UILocalNotification *notification = [[UILocalNotification alloc] init];
-        notification.alertBody = NSLocalizedString(@"finish_message", nil);
-        notification.alertAction = @"Open";
-        notification.soundName = UILocalNotificationDefaultSoundName;
         
-        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+        [[[TCFinishWordCountNotification alloc] init] show];
+        
         if (_previousNotification) {
             [[UIApplication sharedApplication] cancelLocalNotification:_previousNotification];
         }
