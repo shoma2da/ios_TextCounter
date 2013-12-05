@@ -10,4 +10,7 @@
 
 @interface TCWordCountNotification : NSObject
 
+- (TCWordCountNotification *) initWithWord:word;
+- (void) show;
+
 @end
