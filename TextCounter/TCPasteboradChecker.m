@@ -18,6 +18,9 @@
         [NSThread sleepForTimeInterval:1];
         
         TCWordModel *newString = [self getWordModel];
+        if (newString == NULL) {
+            return;
+        }
         
         if ([_currentWord isEqual:newString]) {
         } else {
@@ -29,6 +32,9 @@
 
 - (TCWordModel*) getWordModel {
     UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+    if (pasteBoard.string == NULL) {
+        return NULL;
+    }
     return [[TCWordModel alloc] initWithWord:pasteBoard.string];
 }
 
