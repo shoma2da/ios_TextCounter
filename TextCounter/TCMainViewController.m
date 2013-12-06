@@ -15,7 +15,7 @@
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
     TCWordModel *_currentWord;
-    UILocalNotification *_previousNotification;
+    TCWordCountNotification *_previousNotification;
 }
 
 @end
@@ -51,7 +51,7 @@
         [[[TCFinishWordCountNotification alloc] init] show];
         
         if (_previousNotification) {
-            [[UIApplication sharedApplication] cancelLocalNotification:_previousNotification];
+            [_previousNotification clear];
         }
     };
     _backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:finishAction];
@@ -63,12 +63,11 @@
     [checker startCheck:^(TCWordModel *model) {
         
         if (_previousNotification) {
-            [[UIApplication sharedApplication] cancelLocalNotification:_previousNotification];
+            [_previousNotification clear];
         }
         
-        [[[TCWordCountNotification alloc] initWithWord:model] show];
-        
-        //_previousNotification = notification;
+        _previousNotification = [[TCWordCountNotification alloc] initWithWord:model];
+        [_previousNotification show];
     }];
 }
 

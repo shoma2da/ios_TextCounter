@@ -13,5 +13,6 @@
 
 - (TCWordCountNotification *) initWithWord:(TCWordModel*)word;
 - (void) show;
+- (void) clear;
 
 @end

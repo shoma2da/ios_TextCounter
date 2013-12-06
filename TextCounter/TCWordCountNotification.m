@@ -11,6 +11,7 @@
 
 @implementation TCWordCountNotification {
     TCWordModel *_wordModel;
+    UILocalNotification *_notification;
 }
 
 - (TCWordCountNotification *)initWithWord:(id)word {
@@ -19,12 +20,16 @@
 }
 
 - (void)show {
-    UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.alertBody =[NSString stringWithFormat:@"%d %@ : %@", _wordModel.wordCount, NSLocalizedString(@"characters", @""), _wordModel.word];
-    notification.alertAction = @"Open";
-    notification.soundName = UILocalNotificationDefaultSoundName;
-    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+    _notification = [[UILocalNotification alloc] init];
+    _notification.alertBody =[NSString stringWithFormat:@"%d %@ : %@", _wordModel.wordCount, NSLocalizedString(@"characters", @""), _wordModel.word];
+    _notification.alertAction = @"Open";
+    _notification.soundName = UILocalNotificationDefaultSoundName;
+    [[UIApplication sharedApplication] presentLocalNotificationNow:_notification];
     
+}
+
+- (void)clear {
+    [[UIApplication sharedApplication] cancelLocalNotification:_notification];
 }
 
 @end
