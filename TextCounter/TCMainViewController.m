@@ -31,6 +31,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -45,6 +46,10 @@
     _notificationDescLabel.text = NSLocalizedString(@"notificationDesc", nil);
     
     //バックグラウンドでPasteBoardを監視
+    [self startBackgroundAction];
+}
+
+- (void) startBackgroundAction {
     void (^finishAction)() = ^{
         [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
         
@@ -56,6 +61,10 @@
     };
     _backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:finishAction];
     [self performSelectorInBackground:@selector(checkPasteBoardChange) withObject:nil];
+}
+
+- (void) endBackgroundAction {
+    [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
 }
 
 - (void) checkPasteBoardChange {
@@ -75,6 +84,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onChangeSwitchValue:(id)sender {
+    UISwitch *settingSwitch = (UISwitch *)sender;
+    
+    //バックグラウンド処理の開始、終了
+    if (settingSwitch.on) {
+        [self startBackgroundAction];
+    } else {
+        [self endBackgroundAction];
+    }
 }
 
 - (void) viewWordAndCount {
