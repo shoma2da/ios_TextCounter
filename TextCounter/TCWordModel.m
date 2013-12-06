@@ -24,4 +24,8 @@
     return NO;
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"[TCWordModel]%@", _word];
+}
+
 @end
