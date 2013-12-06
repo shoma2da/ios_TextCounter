@@ -8,6 +8,8 @@
 
 #import "TCNotificationSettingSwitch.h"
 
+#define DEFAULTS_KEY @"switch_value"
+
 @implementation TCNotificationSettingSwitch
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -20,7 +22,9 @@
 }
 
 - (void)onChangeSwitch:(UISwitch *)this{
-    NSLog(@"change switch value %@", this.on ? @"YES" : @"NO");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:this.on forKey:DEFAULTS_KEY];
+    [defaults synchronize];
 }
 
 @end
