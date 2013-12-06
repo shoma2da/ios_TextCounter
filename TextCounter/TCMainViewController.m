@@ -7,11 +7,15 @@
 //
 
 #import "TCMainViewController.h"
+#import "TCWordModel.h"
+#import "TCFinishWordCountNotification.h"
+#import "TCPasteboradChecker.h"
+#import "TCWordCountNotification.h"
 
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
-    NSString *_currentCopiedString;
-    UILocalNotification *_previousNotification;
+    TCWordModel *_currentWord;
+    TCWordCountNotification *_previousNotification;
 }
 
 @end
@@ -43,14 +47,11 @@
     //バックグラウンドでPasteBoardを監視
     void (^finishAction)() = ^{
         [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
-        UILocalNotification *notification = [[UILocalNotification alloc] init];
-        notification.alertBody = NSLocalizedString(@"finish_message", nil);
-        notification.alertAction = @"Open";
-        notification.soundName = UILocalNotificationDefaultSoundName;
         
-        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+        [[[TCFinishWordCountNotification alloc] init] show];
+        
         if (_previousNotification) {
-            [[UIApplication sharedApplication] cancelLocalNotification:_previousNotification];
+            [_previousNotification clear];
         }
     };
     _backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:finishAction];
@@ -58,28 +59,16 @@
 }
 
 - (void) checkPasteBoardChange {
-    for (int i = 0; i < 15 * 60; i++) { //15分はチェックを続ける
-        [NSThread sleepForTimeInterval:1];
+    TCPasteboradChecker *checker = [[TCPasteboradChecker alloc] init];
+    [checker startCheck:^(TCWordModel *model) {
         
-        NSString *newString = [self getCopiedString];
-        
-        if ([_currentCopiedString isEqualToString:newString]) {
-        } else {
-            _currentCopiedString = newString;
-            
-            UILocalNotification *notification = [[UILocalNotification alloc] init];
-            notification.alertBody =[NSString stringWithFormat:@"%d %@ : %@", [_currentCopiedString length], NSLocalizedString(@"characters", @""), _currentCopiedString];
-            notification.alertAction = @"Open";
-            notification.soundName = UILocalNotificationDefaultSoundName;
-            [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-            
-            if (_previousNotification) {
-                [[UIApplication sharedApplication] cancelLocalNotification:_previousNotification];
-            }
-            
-            _previousNotification = notification;
+        if (_previousNotification) {
+            [_previousNotification clear];
         }
-    }
+        
+        _previousNotification = [[TCWordCountNotification alloc] initWithWord:model];
+        [_previousNotification show];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,24 +78,22 @@
 }
 
 - (void) viewWordAndCount {
-    _currentCopiedString = [self getCopiedString];
+    _currentWord = [self getWordModel];
     
     //文字数表示
-    NSString *countStr = [NSString stringWithFormat:@"%d %@", [_currentCopiedString length], NSLocalizedString(@"characters", @"")];
+    NSString *countStr = [NSString stringWithFormat:@"%d %@", _currentWord.wordCount, NSLocalizedString(@"characters", @"")];
     _countLabel.text = countStr;
     
     //コピー文字列を表示
-    if ([_currentCopiedString length] == 0) {
+    _wordLabel.text = _currentWord.word;
+    if (_currentWord.wordCount == 0) {
         _wordLabel.text = NSLocalizedString(@"hint", @"");
-    } else {
-        _wordLabel.text = _currentCopiedString;
     }
-    
 }
 
-- (NSString*) getCopiedString {
+- (TCWordModel*) getWordModel {
     UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
-    return pasteBoard.string;
+    return [[TCWordModel alloc] initWithWord:pasteBoard.string];
 }
 
 @end

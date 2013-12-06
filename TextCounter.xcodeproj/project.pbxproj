@@ -21,9 +21,13 @@
 		341A9CE2184A1202000A79EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341A9CC4184A1202000A79EE /* UIKit.framework */; };
 		341A9CEA184A1202000A79EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 341A9CE8184A1202000A79EE /* InfoPlist.strings */; };
 		341A9CEC184A1202000A79EE /* TextCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 341A9CEB184A1202000A79EE /* TextCounterTests.m */; };
+		343A5BCC1850BB0A000E1030 /* TCFinishWordCountNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A5BCB1850BB0A000E1030 /* TCFinishWordCountNotification.m */; };
+		343A5BCF1850BD1C000E1030 /* TCPasteboradChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A5BCE1850BD1C000E1030 /* TCPasteboradChecker.m */; };
 		345249B3184A186900B86B51 /* TCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345249B2184A186900B86B51 /* TCMainViewController.m */; };
 		345249C0184A1EB400B86B51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345249BE184A1EB400B86B51 /* Localizable.strings */; };
 		345249C4184A201E00B86B51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345249C2184A201E00B86B51 /* Localizable.strings */; };
+		347D8E7A184E239900E2A5D7 /* TCWordCountNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 347D8E79184E239900E2A5D7 /* TCWordCountNotification.m */; };
+		347D8E7D184F12C300E2A5D7 /* TCWordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 347D8E7C184F12C300E2A5D7 /* TCWordModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +60,19 @@
 		341A9CE7184A1202000A79EE /* TextCounterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextCounterTests-Info.plist"; sourceTree = "<group>"; };
 		341A9CE9184A1202000A79EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		341A9CEB184A1202000A79EE /* TextCounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCounterTests.m; sourceTree = "<group>"; };
+		343A5BCA1850BB0A000E1030 /* TCFinishWordCountNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCFinishWordCountNotification.h; sourceTree = "<group>"; };
+		343A5BCB1850BB0A000E1030 /* TCFinishWordCountNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCFinishWordCountNotification.m; sourceTree = "<group>"; };
+		343A5BCD1850BD1C000E1030 /* TCPasteboradChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPasteboradChecker.h; sourceTree = "<group>"; };
+		343A5BCE1850BD1C000E1030 /* TCPasteboradChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPasteboradChecker.m; sourceTree = "<group>"; };
 		345249B1184A186900B86B51 /* TCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMainViewController.h; sourceTree = "<group>"; };
 		345249B2184A186900B86B51 /* TCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMainViewController.m; sourceTree = "<group>"; };
 		345249BF184A1EB400B86B51 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Localizable.strings; sourceTree = "<group>"; };
 		345249C3184A201E00B86B51 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Localizable.strings; sourceTree = "<group>"; };
 		345249C5184AC91500B86B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		347D8E78184E239900E2A5D7 /* TCWordCountNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCWordCountNotification.h; sourceTree = "<group>"; };
+		347D8E79184E239900E2A5D7 /* TCWordCountNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCWordCountNotification.m; sourceTree = "<group>"; };
+		347D8E7B184F12C300E2A5D7 /* TCWordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCWordModel.h; sourceTree = "<group>"; };
+		347D8E7C184F12C300E2A5D7 /* TCWordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCWordModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +142,14 @@
 				341A9CC7184A1202000A79EE /* Supporting Files */,
 				345249B1184A186900B86B51 /* TCMainViewController.h */,
 				345249B2184A186900B86B51 /* TCMainViewController.m */,
+				347D8E78184E239900E2A5D7 /* TCWordCountNotification.h */,
+				347D8E79184E239900E2A5D7 /* TCWordCountNotification.m */,
+				347D8E7B184F12C300E2A5D7 /* TCWordModel.h */,
+				347D8E7C184F12C300E2A5D7 /* TCWordModel.m */,
+				343A5BCA1850BB0A000E1030 /* TCFinishWordCountNotification.h */,
+				343A5BCB1850BB0A000E1030 /* TCFinishWordCountNotification.m */,
+				343A5BCD1850BD1C000E1030 /* TCPasteboradChecker.h */,
+				343A5BCE1850BD1C000E1030 /* TCPasteboradChecker.m */,
 			);
 			path = TextCounter;
 			sourceTree = "<group>";
@@ -291,9 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347D8E7D184F12C300E2A5D7 /* TCWordModel.m in Sources */,
+				343A5BCF1850BD1C000E1030 /* TCPasteboradChecker.m in Sources */,
 				345249B3184A186900B86B51 /* TCMainViewController.m in Sources */,
 				341A9CD7184A1202000A79EE /* TCViewController.m in Sources */,
 				341A9CCD184A1202000A79EE /* main.m in Sources */,
+				343A5BCC1850BB0A000E1030 /* TCFinishWordCountNotification.m in Sources */,
+				347D8E7A184E239900E2A5D7 /* TCWordCountNotification.m in Sources */,
 				341A9CD1184A1202000A79EE /* TCAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
