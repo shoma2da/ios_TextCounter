@@ -11,12 +11,15 @@
 #import "TCFinishWordCountNotification.h"
 #import "TCPasteboradChecker.h"
 #import "TCWordCountNotification.h"
+#import "TCNotificationSettingSwitch.h"
 
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
     TCWordModel *_currentWord;
     TCWordCountNotification *_previousNotification;
 }
+
+@property (weak, nonatomic) IBOutlet TCNotificationSettingSwitch *settingSwitch;
 
 @end
 
@@ -46,7 +49,9 @@
     _notificationDescLabel.text = NSLocalizedString(@"notificationDesc", nil);
     
     //バックグラウンドでPasteBoardを監視
-    [self startBackgroundAction];
+    if (_settingSwitch.on) {
+        [self startBackgroundAction];
+    }
 }
 
 - (void) startBackgroundAction {

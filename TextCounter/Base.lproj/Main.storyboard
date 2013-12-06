@@ -50,6 +50,7 @@
                     <connections>
                         <outlet property="countLabel" destination="d2r-FK-gnE" id="XEj-df-k9K"/>
                         <outlet property="notificationDescLabel" destination="4L1-Pu-YqV" id="J5m-3T-IQx"/>
+                        <outlet property="settingSwitch" destination="lU2-G0-3Zq" id="ibD-1D-QuL"/>
                         <outlet property="wordLabel" destination="Nkj-Rs-eQs" id="3aI-zc-tDl"/>
                     </connections>
                 </viewController>
