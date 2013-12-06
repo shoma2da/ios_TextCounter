@@ -23,6 +23,7 @@
 		341A9CEC184A1202000A79EE /* TextCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 341A9CEB184A1202000A79EE /* TextCounterTests.m */; };
 		343A5BCC1850BB0A000E1030 /* TCFinishWordCountNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A5BCB1850BB0A000E1030 /* TCFinishWordCountNotification.m */; };
 		343A5BCF1850BD1C000E1030 /* TCPasteboradChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A5BCE1850BD1C000E1030 /* TCPasteboradChecker.m */; };
+		343A5BD21851E469000E1030 /* TCNotificationSettingSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A5BD11851E469000E1030 /* TCNotificationSettingSwitch.m */; };
 		345249B3184A186900B86B51 /* TCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345249B2184A186900B86B51 /* TCMainViewController.m */; };
 		345249C0184A1EB400B86B51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345249BE184A1EB400B86B51 /* Localizable.strings */; };
 		345249C4184A201E00B86B51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345249C2184A201E00B86B51 /* Localizable.strings */; };
@@ -64,6 +65,8 @@
 		343A5BCB1850BB0A000E1030 /* TCFinishWordCountNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCFinishWordCountNotification.m; sourceTree = "<group>"; };
 		343A5BCD1850BD1C000E1030 /* TCPasteboradChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPasteboradChecker.h; sourceTree = "<group>"; };
 		343A5BCE1850BD1C000E1030 /* TCPasteboradChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPasteboradChecker.m; sourceTree = "<group>"; };
+		343A5BD01851E469000E1030 /* TCNotificationSettingSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNotificationSettingSwitch.h; sourceTree = "<group>"; };
+		343A5BD11851E469000E1030 /* TCNotificationSettingSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNotificationSettingSwitch.m; sourceTree = "<group>"; };
 		345249B1184A186900B86B51 /* TCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMainViewController.h; sourceTree = "<group>"; };
 		345249B2184A186900B86B51 /* TCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMainViewController.m; sourceTree = "<group>"; };
 		345249BF184A1EB400B86B51 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Localizable.strings; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				343A5BCB1850BB0A000E1030 /* TCFinishWordCountNotification.m */,
 				343A5BCD1850BD1C000E1030 /* TCPasteboradChecker.h */,
 				343A5BCE1850BD1C000E1030 /* TCPasteboradChecker.m */,
+				343A5BD01851E469000E1030 /* TCNotificationSettingSwitch.h */,
+				343A5BD11851E469000E1030 /* TCNotificationSettingSwitch.m */,
 			);
 			path = TextCounter;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				341A9CD7184A1202000A79EE /* TCViewController.m in Sources */,
 				341A9CCD184A1202000A79EE /* main.m in Sources */,
 				343A5BCC1850BB0A000E1030 /* TCFinishWordCountNotification.m in Sources */,
+				343A5BD21851E469000E1030 /* TCNotificationSettingSwitch.m in Sources */,
 				347D8E7A184E239900E2A5D7 /* TCWordCountNotification.m in Sources */,
 				341A9CD1184A1202000A79EE /* TCAppDelegate.m in Sources */,
 			);

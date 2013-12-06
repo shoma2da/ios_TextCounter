@@ -11,12 +11,15 @@
 #import "TCFinishWordCountNotification.h"
 #import "TCPasteboradChecker.h"
 #import "TCWordCountNotification.h"
+#import "TCNotificationSettingSwitch.h"
 
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
     TCWordModel *_currentWord;
     TCWordCountNotification *_previousNotification;
 }
+
+@property (weak, nonatomic) IBOutlet TCNotificationSettingSwitch *settingSwitch;
 
 @end
 
@@ -30,6 +33,7 @@
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -45,6 +49,12 @@
     _notificationDescLabel.text = NSLocalizedString(@"notificationDesc", nil);
     
     //バックグラウンドでPasteBoardを監視
+    if (_settingSwitch.on) {
+        [self startBackgroundAction];
+    }
+}
+
+- (void) startBackgroundAction {
     void (^finishAction)() = ^{
         [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
         
@@ -56,6 +66,10 @@
     };
     _backgroundTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:finishAction];
     [self performSelectorInBackground:@selector(checkPasteBoardChange) withObject:nil];
+}
+
+- (void) endBackgroundAction {
+    [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
 }
 
 - (void) checkPasteBoardChange {
@@ -75,6 +89,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onChangeSwitchValue:(id)sender {
+    UISwitch *settingSwitch = (UISwitch *)sender;
+    
+    //バックグラウンド処理の開始、終了
+    if (settingSwitch.on) {
+        [self startBackgroundAction];
+    } else {
+        [self endBackgroundAction];
+    }
 }
 
 - (void) viewWordAndCount {
