@@ -15,7 +15,8 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     
-    self.on = YES;
+    BOOL checkedValue = [[NSUserDefaults standardUserDefaults] boolForKey:DEFAULTS_KEY];
+    self.on = checkedValue;
     [self addTarget:self action:@selector(onChangeSwitch:) forControlEvents:UIControlEventValueChanged];
     
     return self;
