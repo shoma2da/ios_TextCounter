@@ -85,12 +85,10 @@
     _countLabel.text = countStr;
     
     //コピー文字列を表示
+    _wordLabel.text = _currentWord.word;
     if (_currentWord.wordCount == 0) {
         _wordLabel.text = NSLocalizedString(@"hint", @"");
-    } else {
-        _wordLabel.text = _currentWord.word;
     }
-    
 }
 
 - (TCWordModel*) getWordModel {
