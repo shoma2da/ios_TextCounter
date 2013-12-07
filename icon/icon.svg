@@ -25,16 +25,18 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="375"
-     inkscape:cy="540"
+     inkscape:cx="-31.574608"
+     inkscape:cy="564.14508"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1320"
-     inkscape:window-height="862"
+     inkscape:window-height="856"
      inkscape:window-x="4"
      inkscape:window-y="0"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -43,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,13 +54,39 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#22924d;fill-opacity:0;stroke:#45f027;stroke-width:1.99999988;stroke-miterlimit:4;stroke-opacity:0.94117647;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:#66ccfc;fill-opacity:0.49019608;stroke:none"
        id="rect3004"
        width="1022"
        height="1022"
-       x="-1091.4281"
-       y="27.505066"
+       x="-1111.4281"
+       y="-98.209221"
        rx="0"
        ry="0" />
+    <rect
+       style="opacity:0;fill:#e0fc66;fill-opacity:0.49019608;stroke:none"
+       id="rect3792"
+       width="862.85712"
+       height="331.42856"
+       x="11.428572"
+       y="540.93359"
+       rx="30"
+       ry="30" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:98.00000191%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-1072.7719"
+       y="361.53766"
+       id="text3839"
+       sodipodi:linespacing="98.000002%"><tspan
+         sodipodi:role="line"
+         id="tspan3841"
+         x="-1072.7719"
+         y="361.53766"
+         style="font-size:320px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:98.00000190999999461%;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Baskerville;-inkscape-font-specification:Baskerville Bold Italic">Word</tspan><tspan
+         sodipodi:role="line"
+         x="-1072.7719"
+         y="675.13763"
+         id="tspan3843"
+         style="font-size:320px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:98.00000190999999461%;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Baskerville;-inkscape-font-specification:Baskerville Bold Italic">Count</tspan></text>
   </g>
 </svg>
