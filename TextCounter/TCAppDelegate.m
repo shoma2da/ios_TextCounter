@@ -7,11 +7,15 @@
 //
 
 #import "TCAppDelegate.h"
+#import "Flurry.h"
 
 @implementation TCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Flurry setCrashReportingEnabled:YES];
+    [Flurry startSession:@"NCJ3DN6M4WBK3KXKH62S"];
+    
     // Override point for customization after application launch.
     return YES;
 }
