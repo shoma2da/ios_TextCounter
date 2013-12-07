@@ -20,6 +20,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet TCNotificationSettingSwitch *settingSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *wordCountDescLabel;
 
 @end
 
@@ -47,6 +48,7 @@
     
     //表示文言の設定
     _notificationDescLabel.text = NSLocalizedString(@"notificationDesc", nil);
+    _wordCountDescLabel.text = NSLocalizedString(@"characters", @"");
     
     //バックグラウンドでPasteBoardを監視
     if (_settingSwitch.on) {
@@ -106,7 +108,7 @@
     _currentWord = [self getWordModel];
     
     //文字数表示
-    NSString *countStr = [NSString stringWithFormat:@"%d %@", _currentWord.wordCount, NSLocalizedString(@"characters", @"")];
+    NSString *countStr = [NSString stringWithFormat:@"%d", _currentWord.wordCount];
     _countLabel.text = countStr;
     
     //コピー文字列を表示

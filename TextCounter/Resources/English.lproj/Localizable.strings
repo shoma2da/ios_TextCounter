@@ -5,7 +5,7 @@
   Created by Shoichi Matsuda on 2013/11/30.
   Copyright (c) 2013年 Shoichi Matsuda. All rights reserved.
 */
-"characters" = "characters";
+"characters" = "number of characters";
 "hint" = "Before you open this application, please copy any characters.";
 "notificationDesc" = "Notification";
 "finish_message" = "Application has done. Please reopen the application.";
