@@ -24,7 +24,6 @@
 		343A5BCC1850BB0A000E1030 /* TCFinishWordCountNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A5BCB1850BB0A000E1030 /* TCFinishWordCountNotification.m */; };
 		343A5BCF1850BD1C000E1030 /* TCPasteboradChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A5BCE1850BD1C000E1030 /* TCPasteboradChecker.m */; };
 		343A5BD21851E469000E1030 /* TCNotificationSettingSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A5BD11851E469000E1030 /* TCNotificationSettingSwitch.m */; };
-		343A5BD41852AE2E000E1030 /* tokka-fusuma-600.gif in Resources */ = {isa = PBXBuildFile; fileRef = 343A5BD31852AE2E000E1030 /* tokka-fusuma-600.gif */; };
 		345249B3184A186900B86B51 /* TCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345249B2184A186900B86B51 /* TCMainViewController.m */; };
 		345249C0184A1EB400B86B51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345249BE184A1EB400B86B51 /* Localizable.strings */; };
 		345249C4184A201E00B86B51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345249C2184A201E00B86B51 /* Localizable.strings */; };
@@ -68,7 +67,6 @@
 		343A5BCE1850BD1C000E1030 /* TCPasteboradChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPasteboradChecker.m; sourceTree = "<group>"; };
 		343A5BD01851E469000E1030 /* TCNotificationSettingSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNotificationSettingSwitch.h; sourceTree = "<group>"; };
 		343A5BD11851E469000E1030 /* TCNotificationSettingSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNotificationSettingSwitch.m; sourceTree = "<group>"; };
-		343A5BD31852AE2E000E1030 /* tokka-fusuma-600.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "tokka-fusuma-600.gif"; sourceTree = "<group>"; };
 		345249B1184A186900B86B51 /* TCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMainViewController.h; sourceTree = "<group>"; };
 		345249B2184A186900B86B51 /* TCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMainViewController.m; sourceTree = "<group>"; };
 		345249BF184A1EB400B86B51 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Localizable.strings; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 		345249B4184A1C6600B86B51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				343A5BD31852AE2E000E1030 /* tokka-fusuma-600.gif */,
 				345249C1184A1FD900B86B51 /* Japanese.lproj */,
 				345249B7184A1D8D00B86B51 /* English.lproj */,
 			);
@@ -299,7 +296,6 @@
 				345249C4184A201E00B86B51 /* Localizable.strings in Resources */,
 				341A9CD9184A1202000A79EE /* Images.xcassets in Resources */,
 				345249C0184A1EB400B86B51 /* Localizable.strings in Resources */,
-				343A5BD41852AE2E000E1030 /* tokka-fusuma-600.gif in Resources */,
 				341A9CCB184A1202000A79EE /* InfoPlist.strings in Resources */,
 				341A9CD4184A1202000A79EE /* Main.storyboard in Resources */,
 			);

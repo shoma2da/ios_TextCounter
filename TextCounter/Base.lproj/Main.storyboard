@@ -7,6 +7,7 @@
         <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController id="vXZ-lx-hvc" customClass="TCMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gXU-fZ-gcB"/>
@@ -16,10 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tokka-fusuma-600.gif" translatesAutoresizingMaskIntoConstraints="NO" id="5Fj-oz-b1S">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1024" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2r-FK-gnE">
                                 <rect key="frame" x="-8" y="48" width="336" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -83,9 +80,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="uz0-OL-swV" secondAttribute="centerX" id="2Oh-fh-o0W"/>
-                            <constraint firstItem="Omp-8K-6nT" firstAttribute="top" secondItem="5Fj-oz-b1S" secondAttribute="bottom" id="7gU-xx-dzH"/>
                             <constraint firstItem="uz0-OL-swV" firstAttribute="top" secondItem="Nkj-Rs-eQs" secondAttribute="bottom" constant="8" id="7ms-iq-4xT"/>
-                            <constraint firstItem="5Fj-oz-b1S" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="DCE-af-Vpn"/>
                             <constraint firstItem="Nkj-Rs-eQs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Gnu-xf-rH3"/>
                             <constraint firstItem="d2r-FK-gnE" firstAttribute="centerX" secondItem="DMU-6q-nit" secondAttribute="centerX" id="HpV-m2-PIp"/>
                             <constraint firstItem="d2r-FK-gnE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-8" id="KfH-1O-4sD"/>
@@ -95,11 +90,9 @@
                             <constraint firstAttribute="trailing" secondItem="DMU-6q-nit" secondAttribute="trailing" id="WDL-Om-z06"/>
                             <constraint firstAttribute="trailing" secondItem="Nkj-Rs-eQs" secondAttribute="trailing" id="dsH-ZH-cDf"/>
                             <constraint firstItem="Nkj-Rs-eQs" firstAttribute="top" secondItem="DMU-6q-nit" secondAttribute="bottom" constant="55" id="gGF-6V-8yL"/>
-                            <constraint firstAttribute="trailing" secondItem="5Fj-oz-b1S" secondAttribute="trailing" id="gSv-wM-bXv"/>
                             <constraint firstItem="Omp-8K-6nT" firstAttribute="top" secondItem="uz0-OL-swV" secondAttribute="bottom" constant="8" id="iIk-rc-adc"/>
                             <constraint firstAttribute="trailing" secondItem="d2r-FK-gnE" secondAttribute="trailing" constant="-8" id="jXw-sv-4wJ"/>
                             <constraint firstItem="d2r-FK-gnE" firstAttribute="centerX" secondItem="Nkj-Rs-eQs" secondAttribute="centerX" id="wRc-ec-dhA"/>
-                            <constraint firstItem="5Fj-oz-b1S" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ykN-Xf-FwR"/>
                             <constraint firstItem="d2r-FK-gnE" firstAttribute="top" secondItem="gXU-fZ-gcB" secondAttribute="bottom" constant="28" id="yrM-7t-qhq"/>
                         </constraints>
                     </view>
@@ -111,13 +104,9 @@
                         <outlet property="wordLabel" destination="Nkj-Rs-eQs" id="3aI-zc-tDl"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <resources>
-        <image name="tokka-fusuma-600.gif" width="600" height="600"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
