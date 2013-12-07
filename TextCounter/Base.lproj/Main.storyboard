@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tokka-fusuma-600.gif" translatesAutoresizingMaskIntoConstraints="NO" id="5Fj-oz-b1S">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1024" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2r-FK-gnE">
                                 <rect key="frame" x="-8" y="48" width="336" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -29,7 +33,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkj-Rs-eQs">
                                 <rect key="frame" x="0.0" y="124" width="320" height="395"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -69,7 +72,6 @@
                                         </connections>
                                     </switch>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="lU2-G0-3Zq" firstAttribute="top" secondItem="uz0-OL-swV" secondAttribute="top" constant="1" id="3DM-aL-3IK"/>
                                     <constraint firstAttribute="bottom" secondItem="lU2-G0-3Zq" secondAttribute="bottom" constant="1" id="5NE-Kc-IyJ"/>
@@ -78,10 +80,12 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="uz0-OL-swV" secondAttribute="centerX" id="2Oh-fh-o0W"/>
+                            <constraint firstItem="Omp-8K-6nT" firstAttribute="top" secondItem="5Fj-oz-b1S" secondAttribute="bottom" id="7gU-xx-dzH"/>
                             <constraint firstItem="uz0-OL-swV" firstAttribute="top" secondItem="Nkj-Rs-eQs" secondAttribute="bottom" constant="8" id="7ms-iq-4xT"/>
+                            <constraint firstItem="5Fj-oz-b1S" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="DCE-af-Vpn"/>
                             <constraint firstItem="Nkj-Rs-eQs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Gnu-xf-rH3"/>
                             <constraint firstItem="d2r-FK-gnE" firstAttribute="centerX" secondItem="DMU-6q-nit" secondAttribute="centerX" id="HpV-m2-PIp"/>
                             <constraint firstItem="d2r-FK-gnE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-8" id="KfH-1O-4sD"/>
@@ -91,9 +95,11 @@
                             <constraint firstAttribute="trailing" secondItem="DMU-6q-nit" secondAttribute="trailing" id="WDL-Om-z06"/>
                             <constraint firstAttribute="trailing" secondItem="Nkj-Rs-eQs" secondAttribute="trailing" id="dsH-ZH-cDf"/>
                             <constraint firstItem="Nkj-Rs-eQs" firstAttribute="top" secondItem="DMU-6q-nit" secondAttribute="bottom" constant="55" id="gGF-6V-8yL"/>
+                            <constraint firstAttribute="trailing" secondItem="5Fj-oz-b1S" secondAttribute="trailing" id="gSv-wM-bXv"/>
                             <constraint firstItem="Omp-8K-6nT" firstAttribute="top" secondItem="uz0-OL-swV" secondAttribute="bottom" constant="8" id="iIk-rc-adc"/>
                             <constraint firstAttribute="trailing" secondItem="d2r-FK-gnE" secondAttribute="trailing" constant="-8" id="jXw-sv-4wJ"/>
                             <constraint firstItem="d2r-FK-gnE" firstAttribute="centerX" secondItem="Nkj-Rs-eQs" secondAttribute="centerX" id="wRc-ec-dhA"/>
+                            <constraint firstItem="5Fj-oz-b1S" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ykN-Xf-FwR"/>
                             <constraint firstItem="d2r-FK-gnE" firstAttribute="top" secondItem="gXU-fZ-gcB" secondAttribute="bottom" constant="28" id="yrM-7t-qhq"/>
                         </constraints>
                     </view>
@@ -109,6 +115,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="tokka-fusuma-600.gif" width="600" height="600"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
