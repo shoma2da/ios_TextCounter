@@ -12,6 +12,7 @@
 #import "TCPasteboradChecker.h"
 #import "TCWordCountNotification.h"
 #import "TCNotificationSettingSwitch.h"
+#import "Flurry.h"
 
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
@@ -41,6 +42,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    //ログ収集
+    [Flurry logEvent:@"launch"];
+    
     [self viewWordAndCount];
     
     //アプリ再表示時のイベントを補足
@@ -60,6 +64,9 @@
     void (^finishAction)() = ^{
         [[UIApplication sharedApplication] endBackgroundTask:_backgroundTask];
         
+        //ログ収集
+        [Flurry logEvent:@"finish_notification"];
+        
         [[[TCFinishWordCountNotification alloc] init] show];
         
         if (_previousNotification) {
@@ -77,6 +84,8 @@
 - (void) checkPasteBoardChange {
     TCPasteboradChecker *checker = [[TCPasteboradChecker alloc] init];
     [checker startCheck:^(TCWordModel *model) {
+        //ログ収集
+        [Flurry logEvent:@"notification"];
         
         if (_previousNotification) {
             [_previousNotification clear];
