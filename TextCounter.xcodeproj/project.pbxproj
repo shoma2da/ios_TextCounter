@@ -225,26 +225,28 @@
 		345249B4184A1C6600B86B51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				345249C1184A1FD900B86B51 /* Japanese.lproj */,
-				345249B7184A1D8D00B86B51 /* English.lproj */,
+				345249C1184A1FD900B86B51 /* ja.lproj */,
+				345249B7184A1D8D00B86B51 /* en.lproj */,
 			);
 			name = Resources;
 			path = TextCounter/Resources;
 			sourceTree = "<group>";
 		};
-		345249B7184A1D8D00B86B51 /* English.lproj */ = {
+		345249B7184A1D8D00B86B51 /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
 				345249BE184A1EB400B86B51 /* Localizable.strings */,
 			);
+			name = en.lproj;
 			path = English.lproj;
 			sourceTree = "<group>";
 		};
-		345249C1184A1FD900B86B51 /* Japanese.lproj */ = {
+		345249C1184A1FD900B86B51 /* ja.lproj */ = {
 			isa = PBXGroup;
 			children = (
 				345249C2184A201E00B86B51 /* Localizable.strings */,
 			);
+			name = ja.lproj;
 			path = Japanese.lproj;
 			sourceTree = "<group>";
 		};
@@ -296,6 +298,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Shoichi Matsuda";
 				TargetAttributes = {
+					341A9CBC184A1202000A79EE = {
+						DevelopmentTeam = 3TN7QQ9JQT;
+					};
 					341A9CDD184A1202000A79EE = {
 						TestTargetID = 341A9CBC184A1202000A79EE;
 					};
@@ -502,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextCounter/TextCounter-Prefix.pch";
 				INFOPLIST_FILE = "TextCounter/TextCounter-Info.plist";
@@ -511,6 +517,7 @@
 					/Users/shoma2da/Desktop/ios_TextCounter/libs/Flurry,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E3B8D325-DD32-4B8D-B3E8-962FD78F8DBD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -520,6 +527,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: SHOICHI MATSUDA (XMXCJ478PY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SHOICHI MATSUDA (XMXCJ478PY)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextCounter/TextCounter-Prefix.pch";
 				INFOPLIST_FILE = "TextCounter/TextCounter-Info.plist";
@@ -529,6 +538,7 @@
 					/Users/shoma2da/Desktop/ios_TextCounter/libs/Flurry,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E3B8D325-DD32-4B8D-B3E8-962FD78F8DBD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
