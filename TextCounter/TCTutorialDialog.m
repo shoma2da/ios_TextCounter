@@ -7,6 +7,7 @@
 //
 
 #import "TCTutorialDialog.h"
+#import "Flurry.h"
 
 @implementation TCTutorialDialog
 
@@ -31,6 +32,9 @@ static NSString * const KEY_INIT = @"key_init";
     
     //チュートリアルを表示したことを保持しておく
     [defaults setBool:NO forKey:KEY_INIT];
+    
+    //ログ収集
+    [Flurry logEvent:@"show_tutorial"];
 }
 
 @end
