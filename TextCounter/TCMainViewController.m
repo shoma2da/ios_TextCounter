@@ -12,6 +12,7 @@
 #import "TCPasteboradChecker.h"
 #import "TCWordCountNotification.h"
 #import "TCNotificationSettingSwitch.h"
+#import "TCTutorialDialog.h"
 #import "Flurry.h"
 
 @interface TCMainViewController () {
@@ -58,6 +59,9 @@
     if (_settingSwitch.on) {
         [self startBackgroundAction];
     }
+    
+    //チュートリアル表示
+    [[[TCTutorialDialog alloc] init] show];
 }
 
 - (void) startBackgroundAction {
