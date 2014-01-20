@@ -38,6 +38,7 @@
 		347D8E7A184E239900E2A5D7 /* TCWordCountNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 347D8E79184E239900E2A5D7 /* TCWordCountNotification.m */; };
 		347D8E7D184F12C300E2A5D7 /* TCWordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 347D8E7C184F12C300E2A5D7 /* TCWordModel.m */; };
 		34C42C13188D540E003D8468 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406F696188D4F990053B756 /* libGoogleAdMobAds.a */; };
+		34E9D067188BEAA800AB0AB1 /* TCTutorialDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E9D066188BEAA800AB0AB1 /* TCTutorialDialog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		347D8E7B184F12C300E2A5D7 /* TCWordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCWordModel.h; sourceTree = "<group>"; };
 		347D8E7C184F12C300E2A5D7 /* TCWordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCWordModel.m; sourceTree = "<group>"; };
 		34C42C14188D54A7003D8468 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		34E9D065188BEAA800AB0AB1 /* TCTutorialDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTutorialDialog.h; sourceTree = "<group>"; };
+		34E9D066188BEAA800AB0AB1 /* TCTutorialDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTutorialDialog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,8 @@
 				343A5BCE1850BD1C000E1030 /* TCPasteboradChecker.m */,
 				343A5BD01851E469000E1030 /* TCNotificationSettingSwitch.h */,
 				343A5BD11851E469000E1030 /* TCNotificationSettingSwitch.m */,
+				34E9D065188BEAA800AB0AB1 /* TCTutorialDialog.h */,
+				34E9D066188BEAA800AB0AB1 /* TCTutorialDialog.m */,
 			);
 			path = TextCounter;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 			files = (
 				347D8E7D184F12C300E2A5D7 /* TCWordModel.m in Sources */,
 				343A5BCF1850BD1C000E1030 /* TCPasteboradChecker.m in Sources */,
+				34E9D067188BEAA800AB0AB1 /* TCTutorialDialog.m in Sources */,
 				345249B3184A186900B86B51 /* TCMainViewController.m in Sources */,
 				341A9CD7184A1202000A79EE /* TCViewController.m in Sources */,
 				341A9CCD184A1202000A79EE /* main.m in Sources */,

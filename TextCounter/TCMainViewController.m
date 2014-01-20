@@ -12,6 +12,7 @@
 #import "TCPasteboradChecker.h"
 #import "TCWordCountNotification.h"
 #import "TCNotificationSettingSwitch.h"
+#import "TCTutorialDialog.h"
 #import "Flurry.h"
 #import "GADBannerView.h"
 
@@ -75,6 +76,9 @@
     
     [bannerView loadRequest:[GADRequest request]];
     //==========
+    
+    //チュートリアル表示
+    [[[TCTutorialDialog alloc] init] show];
 }
 
 - (void) startBackgroundAction {
