@@ -13,6 +13,7 @@
 #import "TCWordCountNotification.h"
 #import "TCNotificationSettingSwitch.h"
 #import "Flurry.h"
+#import "GADBannerView.h"
 
 @interface TCMainViewController () {
     UIBackgroundTaskIdentifier _backgroundTask;
@@ -58,6 +59,22 @@
     if (_settingSwitch.on) {
         [self startBackgroundAction];
     }
+    
+    //広告=====
+    GADBannerView* bannerView = [[GADBannerView alloc]
+                   initWithFrame:CGRectMake(0.0,
+                                            self.view.frame.size.height -
+                                            GAD_SIZE_320x50.height,
+                                            GAD_SIZE_320x50.width,
+                                            GAD_SIZE_320x50.height)];
+    
+    bannerView.adUnitID = @"ca-app-pub-8704720300499162/1519566219";
+    
+    bannerView.rootViewController = self;
+    [self.view addSubview:bannerView];
+    
+    [bannerView loadRequest:[GADRequest request]];
+    //==========
 }
 
 - (void) startBackgroundAction {
