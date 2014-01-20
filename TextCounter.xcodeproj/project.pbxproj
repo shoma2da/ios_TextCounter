@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3406F697188D4F990053B756 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406F696188D4F990053B756 /* libGoogleAdMobAds.a */; };
-		3406F699188D4FEE0053B756 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406F698188D4FEE0053B756 /* AudioToolbox.framework */; };
-		3406F69B188D4FF60053B756 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406F69A188D4FF60053B756 /* MessageUI.framework */; };
+		3406F69C188D53810053B756 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406F698188D4FEE0053B756 /* AudioToolbox.framework */; };
+		3406F69D188D53870053B756 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406F69A188D4FF60053B756 /* MessageUI.framework */; };
+		3406F69E188D538E0053B756 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343A5BE418533F07000E1030 /* SystemConfiguration.framework */; };
+		3406F69F188D53960053B756 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341A9CC2184A1202000A79EE /* CoreGraphics.framework */; };
 		341A9CC1184A1202000A79EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341A9CC0184A1202000A79EE /* Foundation.framework */; };
-		341A9CC3184A1202000A79EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341A9CC2184A1202000A79EE /* CoreGraphics.framework */; };
 		341A9CC5184A1202000A79EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341A9CC4184A1202000A79EE /* UIKit.framework */; };
 		341A9CCB184A1202000A79EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 341A9CC9184A1202000A79EE /* InfoPlist.strings */; };
 		341A9CCD184A1202000A79EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 341A9CCC184A1202000A79EE /* main.m */; };
@@ -28,14 +28,16 @@
 		343A5BCF1850BD1C000E1030 /* TCPasteboradChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A5BCE1850BD1C000E1030 /* TCPasteboradChecker.m */; };
 		343A5BD21851E469000E1030 /* TCNotificationSettingSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A5BD11851E469000E1030 /* TCNotificationSettingSwitch.m */; };
 		343A5BE318533CF9000E1030 /* libFlurry_4.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 343A5BE218533CF9000E1030 /* libFlurry_4.3.0.a */; };
-		343A5BE518533F07000E1030 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343A5BE418533F07000E1030 /* SystemConfiguration.framework */; };
 		343A5BE718534040000E1030 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343A5BE618534040000E1030 /* Security.framework */; };
 		343A5BE918534050000E1030 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343A5BE818534050000E1030 /* AdSupport.framework */; };
+		34429A87188D55760020B3E6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C42C14188D54A7003D8468 /* StoreKit.framework */; };
+		34429A89188D557B0020B3E6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34429A88188D557B0020B3E6 /* AVFoundation.framework */; };
 		345249B3184A186900B86B51 /* TCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345249B2184A186900B86B51 /* TCMainViewController.m */; };
 		345249C0184A1EB400B86B51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345249BE184A1EB400B86B51 /* Localizable.strings */; };
 		345249C4184A201E00B86B51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345249C2184A201E00B86B51 /* Localizable.strings */; };
 		347D8E7A184E239900E2A5D7 /* TCWordCountNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 347D8E79184E239900E2A5D7 /* TCWordCountNotification.m */; };
 		347D8E7D184F12C300E2A5D7 /* TCWordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 347D8E7C184F12C300E2A5D7 /* TCWordModel.m */; };
+		34C42C13188D540E003D8468 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406F696188D4F990053B756 /* libGoogleAdMobAds.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,7 @@
 		343A5BE418533F07000E1030 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		343A5BE618534040000E1030 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		343A5BE818534050000E1030 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		34429A88188D557B0020B3E6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		345249B1184A186900B86B51 /* TCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMainViewController.h; sourceTree = "<group>"; };
 		345249B2184A186900B86B51 /* TCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMainViewController.m; sourceTree = "<group>"; };
 		345249BF184A1EB400B86B51 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Localizable.strings; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		347D8E79184E239900E2A5D7 /* TCWordCountNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCWordCountNotification.m; sourceTree = "<group>"; };
 		347D8E7B184F12C300E2A5D7 /* TCWordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCWordModel.h; sourceTree = "<group>"; };
 		347D8E7C184F12C300E2A5D7 /* TCWordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCWordModel.m; sourceTree = "<group>"; };
+		34C42C14188D54A7003D8468 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +111,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				341A9CC3184A1202000A79EE /* CoreGraphics.framework in Frameworks */,
-				343A5BE518533F07000E1030 /* SystemConfiguration.framework in Frameworks */,
-				3406F69B188D4FF60053B756 /* MessageUI.framework in Frameworks */,
-				3406F699188D4FEE0053B756 /* AudioToolbox.framework in Frameworks */,
+				34429A89188D557B0020B3E6 /* AVFoundation.framework in Frameworks */,
+				34429A87188D55760020B3E6 /* StoreKit.framework in Frameworks */,
+				34C42C13188D540E003D8468 /* libGoogleAdMobAds.a in Frameworks */,
+				3406F69F188D53960053B756 /* CoreGraphics.framework in Frameworks */,
+				3406F69E188D538E0053B756 /* SystemConfiguration.framework in Frameworks */,
+				3406F69D188D53870053B756 /* MessageUI.framework in Frameworks */,
+				3406F69C188D53810053B756 /* AudioToolbox.framework in Frameworks */,
 				343A5BE918534050000E1030 /* AdSupport.framework in Frameworks */,
-				3406F697188D4F990053B756 /* libGoogleAdMobAds.a in Frameworks */,
 				343A5BE718534040000E1030 /* Security.framework in Frameworks */,
 				343A5BE318533CF9000E1030 /* libFlurry_4.3.0.a in Frameworks */,
 				341A9CC5184A1202000A79EE /* UIKit.framework in Frameworks */,
@@ -174,6 +180,8 @@
 		341A9CBF184A1202000A79EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				34429A88188D557B0020B3E6 /* AVFoundation.framework */,
+				34C42C14188D54A7003D8468 /* StoreKit.framework */,
 				3406F69A188D4FF60053B756 /* MessageUI.framework */,
 				3406F698188D4FEE0053B756 /* AudioToolbox.framework */,
 				343A5BE818534050000E1030 /* AdSupport.framework */,
@@ -555,6 +563,7 @@
 					/Users/shoma2da/Desktop/ios_TextCounter/libs/Flurry,
 					/Users/shoma2da/Desktop/ios_TextCounter/libs/AdMob,
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E3B8D325-DD32-4B8D-B3E8-962FD78F8DBD";
 				WRAPPER_EXTENSION = app;
@@ -577,6 +586,7 @@
 					/Users/shoma2da/Desktop/ios_TextCounter/libs/Flurry,
 					/Users/shoma2da/Desktop/ios_TextCounter/libs/AdMob,
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E3B8D325-DD32-4B8D-B3E8-962FD78F8DBD";
 				WRAPPER_EXTENSION = app;
