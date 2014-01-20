@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3406F697188D4F990053B756 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406F696188D4F990053B756 /* libGoogleAdMobAds.a */; };
+		3406F699188D4FEE0053B756 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406F698188D4FEE0053B756 /* AudioToolbox.framework */; };
+		3406F69B188D4FF60053B756 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406F69A188D4FF60053B756 /* MessageUI.framework */; };
 		341A9CC1184A1202000A79EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341A9CC0184A1202000A79EE /* Foundation.framework */; };
 		341A9CC3184A1202000A79EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341A9CC2184A1202000A79EE /* CoreGraphics.framework */; };
 		341A9CC5184A1202000A79EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341A9CC4184A1202000A79EE /* UIKit.framework */; };
@@ -57,6 +59,8 @@
 		3406F694188D4F990053B756 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
 		3406F695188D4F990053B756 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
 		3406F696188D4F990053B756 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		3406F698188D4FEE0053B756 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3406F69A188D4FF60053B756 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		341A9CBD184A1202000A79EE /* TextCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		341A9CC0184A1202000A79EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		341A9CC2184A1202000A79EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,11 +107,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341A9CC3184A1202000A79EE /* CoreGraphics.framework in Frameworks */,
+				343A5BE518533F07000E1030 /* SystemConfiguration.framework in Frameworks */,
+				3406F69B188D4FF60053B756 /* MessageUI.framework in Frameworks */,
+				3406F699188D4FEE0053B756 /* AudioToolbox.framework in Frameworks */,
 				343A5BE918534050000E1030 /* AdSupport.framework in Frameworks */,
 				3406F697188D4F990053B756 /* libGoogleAdMobAds.a in Frameworks */,
 				343A5BE718534040000E1030 /* Security.framework in Frameworks */,
-				343A5BE518533F07000E1030 /* SystemConfiguration.framework in Frameworks */,
-				341A9CC3184A1202000A79EE /* CoreGraphics.framework in Frameworks */,
 				343A5BE318533CF9000E1030 /* libFlurry_4.3.0.a in Frameworks */,
 				341A9CC5184A1202000A79EE /* UIKit.framework in Frameworks */,
 				341A9CC1184A1202000A79EE /* Foundation.framework in Frameworks */,
@@ -168,6 +174,8 @@
 		341A9CBF184A1202000A79EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3406F69A188D4FF60053B756 /* MessageUI.framework */,
+				3406F698188D4FEE0053B756 /* AudioToolbox.framework */,
 				343A5BE818534050000E1030 /* AdSupport.framework */,
 				343A5BE618534040000E1030 /* Security.framework */,
 				343A5BE418533F07000E1030 /* SystemConfiguration.framework */,
